@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d49f62c0-5769-4dfd-9bde-c9072ca15809" name="Default" comment="" />
+    <list default="true" id="d49f62c0-5769-4dfd-9bde-c9072ca15809" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java" />
+    </list>
     <ignored path="messenger.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +33,8 @@
       <file leaf-file-name="MessageResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="246">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -48,6 +50,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -75,10 +80,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/CommentResource.java" />
         <option value="$PROJECT_DIR$/src/test/java/MessagesAndCommentsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/model/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/model/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/CommentSubResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java" />
       </list>
     </option>
   </component>
@@ -113,7 +118,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -1148,15 +1153,15 @@
       <workItem from="1514878232244" duration="219000" />
       <workItem from="1514918341432" duration="16254000" />
       <workItem from="1515472216902" duration="11106000" />
-      <workItem from="1515567573994" duration="613000" />
+      <workItem from="1515567573994" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52638000" />
+    <option name="totallyTimeSpent" value="53314000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1247,8 +1252,8 @@
         <state relative-caret-position="867">
           <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
-            <element signature="e#1200#1201#0" expanded="false" />
-            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1314#1315#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1276,8 +1281,8 @@
         <state relative-caret-position="561">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#1200#1201#0" expanded="false" />
-            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1314#1315#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1295,8 +1300,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1200#1201#0" expanded="false" />
-            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1314#1315#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1314,8 +1319,8 @@
         <state relative-caret-position="901">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <element signature="e#1200#1201#0" expanded="false" />
-            <element signature="e#1257#1258#0" expanded="false" />
+            <element signature="e#1314#1315#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1541,8 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kray/messenger/resources/MessageResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="246">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
           <folding />
         </state>
       </provider>

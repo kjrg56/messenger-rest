@@ -6,8 +6,11 @@ import com.kray.messenger.model.Message;
 import com.kray.messenger.service.MessageService;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+import java.net.URI;
 import java.util.List;
 
 @Path("/messages")
@@ -34,8 +37,16 @@ public class MessageResource {
     }
 
     @POST
-    public Message addMessage(Message message) {
-        return messageService.addMessage(message);
+    public Response addMessage(Message message, @Context UriInfo uriInfo) {
+        Message newMessage = messageService.addMessage(message);
+
+        if (newMessage != null) {
+            String newMessageId = String.valueOf(newMessage.getId());
+            URI location = uriInfo.getAbsolutePathBuilder().path(newMessageId).build();
+            return Response.created(location).entity(newMessage).build();
+        } else {
+            return Response.notModified().build();
+        }
     }
 
     @PUT
