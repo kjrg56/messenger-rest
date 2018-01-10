@@ -1,5 +1,6 @@
 package com.kray.messenger.service;
 
+import com.kray.messenger.exception.DataNotFoundException;
 import com.kray.messenger.model.Message;
 
 import java.util.ArrayList;
@@ -60,6 +61,9 @@ public class MessageService {
     public Message getMessageById(Long id) {
         em.getTransaction().begin();
         Message message = em.find(Message.class, id);
+        if (message == null) {
+            throw new DataNotFoundException("Message with id: '" + id + "' not found.");
+        }
         em.getTransaction().commit();
         em.close();
         return message;
