@@ -1,7 +1,8 @@
 package com.kray.messenger.resources;
 
 import com.kray.messenger.beans.MessageFilterBean;
-import com.kray.messenger.model.Comment;
+import com.kray.messenger.hateoas.MessageReferencesBuilder;
+import com.kray.messenger.model.Link;
 import com.kray.messenger.model.Message;
 import com.kray.messenger.service.MessageService;
 
@@ -32,8 +33,14 @@ public class MessageResource {
 
     @GET
     @Path("/{messageId}")
-    public Message getMessage(@PathParam("messageId") long messageId) {
-        return messageService.getMessageById(messageId);
+    public Message getMessage(@PathParam("messageId") long messageId,
+                              @Context UriInfo uriInfo) {
+        Message message = messageService.getMessageById(messageId);
+        MessageReferencesBuilder builder = new MessageReferencesBuilder(uriInfo, message);
+        message.getLinks().add(builder.getSelfLink());
+        message.getLinks().add(builder.getProfileLink());
+        message.getLinks().add(builder.getCommentsLink());
+        return message;
     }
 
     @POST
@@ -70,5 +77,6 @@ public class MessageResource {
         // All HTTP methods that match the path will be redirected
         return new CommentSubResource();
     }
+
 
 }

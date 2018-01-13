@@ -3,10 +3,8 @@ package com.kray.messenger.service;
 import com.kray.messenger.exception.DataNotFoundException;
 import com.kray.messenger.model.Message;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import com.kray.messenger.repositories.MessageRepository;
 
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;

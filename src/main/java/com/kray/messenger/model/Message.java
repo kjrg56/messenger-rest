@@ -1,7 +1,6 @@
 package com.kray.messenger.model;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,6 +23,9 @@ public class Message {
 
     @OneToMany(mappedBy = "message", cascade = CascadeType.ALL)
     private List<Comment> comments = new ArrayList<>();
+
+    @Transient
+    private List<Link> links = new ArrayList<>();
 
     public Message() {
     }
@@ -76,6 +78,14 @@ public class Message {
         this.comments = comments;
     }
 
+    public List<Link> getLinks() {
+        return links;
+    }
+
+    public void setLinks(List<Link> links) {
+        this.links = links;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -83,7 +93,8 @@ public class Message {
                 ", message='" + message + '\'' +
                 ", author='" + author + '\'' +
                 ", creationDatetime=" + creationDatetime +
-                ", comments=" + comments.toString()+
+                ", comments=" + comments +
+                ", links=" + links +
                 '}';
     }
 }

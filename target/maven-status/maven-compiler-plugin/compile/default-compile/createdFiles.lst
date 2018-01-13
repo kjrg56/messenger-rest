@@ -4,6 +4,7 @@ com\kray\messenger\repositories\MessageRepository.class
 com\kray\messenger\beans\MessageFilterBean.class
 com\kray\messenger\model\Comment.class
 com\kray\messenger\resources\InjectDemo.class
+com\kray\messenger\exception\DataNotFoundException.class
 com\kray\messenger\resources\MessageResource.class
 com\kray\messenger\model\Profile.class
 com\kray\messenger\resources\CommentSubResource.class
@@ -11,4 +12,6 @@ com\kray\messenger\repositories\ProfileRepository.class
 com\kray\messenger\service\ProfileService.class
 com\kray\messenger\service\MessageService.class
 com\kray\messenger\resources\ProfileResource.class
+com\kray\messenger\exception\DataNotFoundExceptionMapper.class
+com\kray\messenger\model\ErrorMessage.class
 com\kray\messenger\model\Message.class
