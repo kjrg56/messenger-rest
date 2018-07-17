@@ -12,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @Path("/messages")
@@ -22,13 +23,23 @@ public class MessageResource {
     private MessageService messageService = new MessageService();
 
     @GET
-    public List<Message> getAllMessages(@BeanParam MessageFilterBean params) {
+    public List<Message> getAllMessages(@BeanParam MessageFilterBean params,
+                                        @Context UriInfo uriInfo) {
+        List<Message> messages = messageService.getAllMessages();
+
         if (params.getStart() >= 0 && params.getSize() > 0) {
-            return messageService.getMessagesPaginated(params.getStart(), params.getSize(), params.getYear());
+            messages = messageService.getMessagesPaginated(params.getStart(), params.getSize(), params.getYear());
         } else if (params.getYear() > 0) {
-            return messageService.getMessagesByYear(params.getYear());
+            messages = messageService.getMessagesByYear(params.getYear());
         }
-        return messageService.getAllMessages();
+
+        for (Message message : messages) {
+            MessageReferencesBuilder builder = new MessageReferencesBuilder(uriInfo, message);
+            message.getLinks().add(builder.getSelfLink());
+            message.getLinks().add(builder.getProfileLink());
+            message.getLinks().add(builder.getCommentsLink());
+        }
+        return messages;
     }
 
     @GET
